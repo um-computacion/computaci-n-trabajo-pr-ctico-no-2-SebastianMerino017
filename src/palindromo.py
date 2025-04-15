@@ -14,4 +14,11 @@ def is_palindromo(text):
     
     return clean_text == clean_text[::-1]
 
+if __name__ == "__main__":
+    texto = input("Ingrese palabra o frase: ")
+    resultado = is_palindromo(texto)
+    if resultado:
+        print("Es un palíndromo")
+    else:
+        print("No es un palíndromo")
 
