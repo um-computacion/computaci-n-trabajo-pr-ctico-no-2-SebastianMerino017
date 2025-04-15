@@ -16,4 +16,18 @@ class TestPalindromo(unittest.TestCase):
         self.assertTrue(is_palindromo("Asi Mario oira misa"))
         self.assertTrue(is_palindromo("Se verlas al reves"))
         self.assertTrue(is_palindromo("Pull up if i pull up"))
+    
+    def test_simple_no_palindromo(self):
+        self.assertFalse(is_palindromo("hola"))
+        self.assertFalse(is_palindromo("amor"))
+        self.assertFalse(is_palindromo("calculadora"))
+        self.assertFalse(is_palindromo("casa"))
+        self.assertFalse(is_palindromo("lluvia"))
+    
+    def test_frase_no_palindromo(self):
+        self.assertFalse(is_palindromo("Hola tanto tiempo"))
+        self.assertFalse(is_palindromo("No deberia hacerlo"))
+        self.assertFalse(is_palindromo("Eso esta brutal"))
+        self.assertFalse(is_palindromo("Im the music"))
+        self.assertFalse(is_palindromo("It was finally released"))
 
