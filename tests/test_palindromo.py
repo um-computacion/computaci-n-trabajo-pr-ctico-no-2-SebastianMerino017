@@ -30,4 +30,26 @@ class TestPalindromo(unittest.TestCase):
         self.assertFalse(is_palindromo("Eso esta brutal"))
         self.assertFalse(is_palindromo("Im the music"))
         self.assertFalse(is_palindromo("It was finally released"))
+    
+    def test_ignorar_caracteres_no_alphanumericos(self):
+        self.assertTrue(is_palindromo("¿Acaso hubo buhos aca?"))
+        self.assertTrue(is_palindromo("No deseo yo ese don."))
+        self.assertTrue(is_palindromo("¡Arriba la birra!"))
+        self.assertTrue(is_palindromo("A ti no, bonita."))
+        self.assertTrue(is_palindromo("A Toyota! Race fast, safe car. A Toyota"))
+
+    def test_espacios_ignorar(self):
+        self.assertTrue(is_palindromo("never odd or even"))
+        self.assertTrue(is_palindromo(" somos o no somos "))
+        self.assertTrue(is_palindromo("a m o r a r o m a"))
+
+    def cadenas_vacias(self):
+        self.assertFalse(is_palindromo(""))
+        self.assertFalse(is_palindromo("c"))
+        self.assertFalse(is_palindromo(" "))
+        self.assertFalse(is_palindromo(".,;:!?"))
+
+if __name__ == "__main__":
+    unittest.main()
+#
 
